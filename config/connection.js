@@ -3,9 +3,9 @@ let mysql = require("mysql");
 // Create the MySQL connection object
 let connection;
 
-if (process.env.JAWSB_URL) {
+if (process.env.JAWSDB_URL) {
     // DB is JawsDB on Heroku
-    connection = mysql.createConnection(process.env.JAWSB_URL);
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
     // DB is local on localhost
     connection = mysql.createConnection({
